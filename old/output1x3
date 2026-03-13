@@ -1,0 +1,60 @@
+# KERNEL: [0] TB: Starting simulation
+# KERNEL: [0] STATE=0 ctrl_dst=0 drop_pkt=0 words_rem=0 | M: v=0 r=1 d=0x00000000 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [25] TB: Reset deasserted
+# KERNEL: [45] TB: === PACKET 1: Valid DST_S0, length=3 ===
+# KERNEL: [45] TB: Control word accepted: tdata=0x00000003
+# KERNEL: [45] STATE=0 ctrl_dst=0 drop_pkt=0 words_rem=3 | M: v=1 r=1 d=0x00000003 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [55] STATE=1 ctrl_dst=0 drop_pkt=0 words_rem=3 | M: v=1 r=0 d=0xaaaa0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [65] TB: Data beat 1 accepted: tdata=0xaaaa0001
+# KERNEL: [65] TB: CHECK S0 routing [PASS]
+# KERNEL: [65] STATE=2 ctrl_dst=0 drop_pkt=0 words_rem=3 | M: v=1 r=1 d=0xaaaa0001 last=0 | S0: v=1 d=0xaaaa0001 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [75] STATE=2 ctrl_dst=0 drop_pkt=0 words_rem=2 | M: v=1 r=1 d=0xaaaa0002 last=0 | S0: v=1 d=0xaaaa0002 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [85] TB: Data beat 2 accepted: tdata=0xaaaa0002
+# KERNEL: [85] STATE=2 ctrl_dst=0 drop_pkt=0 words_rem=1 | M: v=1 r=1 d=0xaaaa0002 last=0 | S0: v=1 d=0xaaaa0002 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [95] STATE=2 ctrl_dst=0 drop_pkt=0 words_rem=0 | M: v=1 r=1 d=0xaaaa0003 last=1 | S0: v=1 d=0xaaaa0003 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [105] TB: Data beat 3 (LAST) accepted: tdata=0xaaaa0003
+# KERNEL: [105] STATE=0 ctrl_dst=0 drop_pkt=0 words_rem=0 | M: v=0 r=1 d=0xaaaa0003 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [135] TB: Packet 1 done, state should be IDLE, words_rem==0
+# KERNEL: [135] TB: === PACKET 2: Valid DST_S1, length=2 ===
+# KERNEL: [135] TB: Control word accepted: tdata=0x00001002 (dst bits[13:12]=01)
+# KERNEL: [135] STATE=0 ctrl_dst=1 drop_pkt=0 words_rem=2 | M: v=1 r=1 d=0x00001002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [145] STATE=1 ctrl_dst=1 drop_pkt=0 words_rem=2 | M: v=1 r=0 d=0xbbbb0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [155] TB: Data beat 1 accepted: tdata=0xbbbb0001
+# KERNEL: [155] TB: CHECK S1 routing [PASS]
+# KERNEL: [155] STATE=2 ctrl_dst=1 drop_pkt=0 words_rem=2 | M: v=1 r=1 d=0xbbbb0001 last=0 | S0: v=0 d=0x00000000 | S1: v=1 d=0xbbbb0001 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [165] STATE=2 ctrl_dst=1 drop_pkt=0 words_rem=1 | M: v=1 r=1 d=0xbbbb0002 last=1 | S0: v=0 d=0x00000000 | S1: v=1 d=0xbbbb0002 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [175] TB: Data beat 2 (LAST) accepted: tdata=0xbbbb0002
+# KERNEL: [175] STATE=0 ctrl_dst=1 drop_pkt=0 words_rem=0 | M: v=0 r=1 d=0xbbbb0002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [205] TB: Packet 2 done
+# KERNEL: [205] TB: === PACKET 3: Valid DST_S2, length=2 ===
+# KERNEL: [205] TB: Control word accepted: tdata=0x00002002 (dst bits[13:12]=10)
+# KERNEL: [205] STATE=0 ctrl_dst=2 drop_pkt=0 words_rem=2 | M: v=1 r=1 d=0x00002002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [215] STATE=1 ctrl_dst=2 drop_pkt=0 words_rem=2 | M: v=1 r=0 d=0xcccc0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [225] TB: Data beat 1 accepted: tdata=0xcccc0001
+# KERNEL: [225] TB: CHECK S2 routing [PASS]
+# KERNEL: [225] STATE=2 ctrl_dst=2 drop_pkt=0 words_rem=2 | M: v=1 r=1 d=0xcccc0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=1 d=0xcccc0001 | err=0
+# KERNEL: [235] STATE=2 ctrl_dst=2 drop_pkt=0 words_rem=1 | M: v=1 r=1 d=0xcccc0002 last=1 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=1 d=0xcccc0002 | err=0
+# KERNEL: [245] TB: Data beat 2 (LAST) accepted: tdata=0xcccc0002
+# KERNEL: [245] STATE=0 ctrl_dst=2 drop_pkt=0 words_rem=0 | M: v=0 r=1 d=0xcccc0002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=0
+# KERNEL: [275] TB: Packet 3 done
+# KERNEL: [275] TB: === PACKET 4: Illegal DST_ILL, length=2 ===
+# KERNEL: [275] TB: Illegal control word accepted: tdata=0x00003002 (dst bits[13:12]=11)
+# KERNEL: [275] STATE=0 ctrl_dst=3 drop_pkt=1 words_rem=2 | M: v=1 r=1 d=0x00003002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=1
+# KERNEL: [285] STATE=1 ctrl_dst=3 drop_pkt=1 words_rem=2 | M: v=1 r=0 d=0xdead0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=1
+# KERNEL: [295] TB: Illegal data beat 1 accepted (should NOT appear at any slave): tdata=0xdead0001
+# KERNEL: [295] TB: CHECK illegal packet dropped [PASS]
+# KERNEL: [295] STATE=2 ctrl_dst=3 drop_pkt=1 words_rem=2 | M: v=1 r=1 d=0xdead0001 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=1
+# KERNEL: [305] STATE=2 ctrl_dst=3 drop_pkt=1 words_rem=1 | M: v=1 r=1 d=0xdead0002 last=1 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=1
+# KERNEL: [315] TB: Illegal data beat 2 (LAST) accepted (should NOT appear at any slave): tdata=0xdead0002
+# KERNEL: [315] STATE=0 ctrl_dst=3 drop_pkt=1 words_rem=0 | M: v=0 r=1 d=0xdead0002 last=0 | S0: v=0 d=0x00000000 | S1: v=0 d=0x00000000 | S2: v=0 d=0x00000000 | err=1
+# KERNEL: [325] TB: CHECK illegal_dst_error flag [PASS]
+# KERNEL: [345] TB: Packet 4 done
+# KERNEL: 
+# KERNEL: [395] TB: TEST SUMMARY: 5 passed, 0 failed
+# KERNEL: [395] TB: *** ALL TESTS PASSED! ***
+# KERNEL: [395] TB: Simulation finished
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (364): $finish called.
+# KERNEL: Time: 395 ns,  Iteration: 0,  Instance: /tb_packet_mux,  Process: @INITIAL#95_3@.
+# KERNEL: stopped at time: 395 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.

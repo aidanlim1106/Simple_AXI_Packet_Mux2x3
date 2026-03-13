@@ -1,0 +1,52 @@
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4734 kB (elbread=427 elab2=4168 kernel=138 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL:    Packet Mux - Simple Testbench
+# KERNEL: [65] Reset complete
+# KERNEL: 
+# KERNEL: --- Testing all routing combinations ---
+# KERNEL: [125] PASS: m0 -> s0
+# KERNEL: [185] PASS: m0 -> s1
+# KERNEL: [245] PASS: m0 -> s2
+# KERNEL: [305] PASS: m1 -> s0
+# KERNEL: [365] PASS: m1 -> s1
+# KERNEL: [425] PASS: m1 -> s2
+# KERNEL: 
+# KERNEL: --- Testing different packet lengths ---
+# KERNEL: [475] PASS: 1-cycle packet
+# KERNEL: [565] PASS: 5-cycle packet
+# KERNEL: [705] PASS: 10-cycle packet
+# KERNEL: 
+# KERNEL: --- Testing round-robin arbitration ---
+# KERNEL: [815] PASS: Simultaneous m0/m1
+# KERNEL: [1015] PASS: Alternating masters
+# KERNEL: 
+# KERNEL: --- Testing illegal destination ---
+# KERNEL: [1075] PASS: Illegal dest m0
+# KERNEL: [1145] PASS: Illegal dest m1
+# KERNEL: 
+# KERNEL: --- Testing early TLAST ---
+# KERNEL: [1215] PASS: Early TLAST detected
+# KERNEL: 
+# KERNEL: --- Testing late TLAST ---
+# KERNEL: [1305] PASS: Late TLAST detected
+# KERNEL: 
+# KERNEL: --- Testing backpressure ---
+# KERNEL: [1405] PASS: Backpressure handled
+# KERNEL:          STATISTICS
+# KERNEL: m0: pkts=11, bytes=108, dropped=1
+# KERNEL: m1: pkts=7, bytes=92, dropped=1
+# KERNEL: s0: pkts=8, bytes=56
+# KERNEL: s1: pkts=6, bytes=64
+# KERNEL: s2: pkts=4, bytes=60
+# KERNEL:          SUMMARY
+# KERNEL: Passed: 16
+# KERNEL: Failed: 0
+# KERNEL: *** ALL TESTS PASSED! ***
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (255): $finish called.
+# KERNEL: Time: 1405 ns,  Iteration: 1,  Instance: /tb_packet_mux,  Process: @INITIAL#108_3@.
+# KERNEL: stopped at time: 1405 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
