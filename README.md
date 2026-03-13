@@ -24,7 +24,7 @@ The repository is organized to separate design intent from verification and lega
 
 ---
 
-## ⚙️ Design & Timing Considerations
+## Design & Timing Considerations
 
 The design was developed with industry-standard constraints in mind. A `constraints.sdc` file is provided (formatted with AI assistance for Synopsys Design Constraints compatibility).
 
